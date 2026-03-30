@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TelaMax</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      width: 220px;
+      background-color: #2f2f2f;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      height: 100vh;
+    }
+
+    aside h2 {
+      text-align: center;
+      font-family: "Trebuchet MS", Verdana;
+      letter-spacing: 2px;
+      border-bottom: 1px solid #555;
+      padding-bottom: 10px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .menu a, .menu button {
+      background: #444;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    main {
+      margin-left: 220px;
+      width: calc(100% - 220px);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-family: "Trebuchet MS", Verdana;
+      letter-spacing: 3px;
+    }
+
+    .container {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      width: 200px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+      padding: 0 10px;
+    }
+
+    /* BOTÕES NOVOS */
+    .botoes {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+    }
+
+    .btn-assistir {
+      background: #28a745;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-assistir:hover {
+      background: #218838;
+    }
+
+    .btn-info {
+      background: #ddd;
+      color: #333;
+      padding: 6px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="layout">
+
+  <aside>
+    <h2>TelaMax</h2>
+    <div class="menu">
+      <a href="#">Início</a>
+      <a href="#">Filmes</a>
+      <a href="#">Séries</a>
+      <button>Minha Lista</button>
+    </div>
+  </aside>
+
+  <main>
+
+    <header>
+      <h1>TelaMax</h1>
+      <p>Seu catálogo simples de filmes e séries</p>
+    </header>
+
+    <div class="container">
+      <div class="catalogo">
+
+        <!-- EXEMPLO DE CARD (repete pros outros) -->
+        <div class="card">
+          <img src="https://m.media-amazon.com/images/S/pv-target-images/2600a1b1a374a2a0026bd9ad99ce6cc6070fdd4e78c7cd4614d30633d7e3fb39.jpg">
+          <h3>Karatê Kid</h3>
+          <p>Um jovem aprende artes marciais com a ajuda de um mestre.</p>
+
+          <div class="botoes">
+            <a href="#" class="btn-assistir">▶ Assistir</a>
+            <a href="https://pt.wikipedia.org/wiki/Karat%C3%AA_Kid_(filme_de_2010)" target="_blank" class="btn-info">
+              Mais informações
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://m.media-amazon.com/images/I/919ZUTtPbXL._AC_UF894,1000_QL80_.jpg">
+          <h3>Shrek</h3>
+          <p>Um ogro embarca em uma aventura para salvar uma princesa.</p>
+
+          <div class="botoes">
+            <a href="#" class="btn-assistir">▶ Assistir</a>
+            <a href="https://pt.wikipedia.org/wiki/Shrek" target="_blank" class="btn-info">
+              Mais informações
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Oppenheimer_%28film%29.jpg">
+          <h3>Oppenheimer</h3>
+          <p>Drama sobre a criação da bomba atômica.</p>
+
+          <div class="botoes">
+            <a href="#" class="btn-assistir">▶ Assistir</a>
+            <a href="https://pt.wikipedia.org/wiki/Oppenheimer_(filme)" target="_blank" class="btn-info">
+              Mais informações
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/0/00/Spider-Man_No_Way_Home_poster.jpg">
+          <h3>Homem-Aranha</h3>
+          <p>Peter enfrenta vilões de outros universos.</p>
+
+          <div class="botoes">
+            <a href="#" class="btn-assistir">▶ Assistir</a>
+            <a href="https://pt.wikipedia.org/wiki/Spider-Man:_No_Way_Home" target="_blank" class="btn-info">
+              Mais informações
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      © 2026 TelaMax
+    </footer>
+
+  </main>
+
+</div>
+
+</body>
+</html>
